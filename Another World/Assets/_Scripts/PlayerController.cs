@@ -34,9 +34,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics2D.Linecast(
+        Move();
+    }
+
+    void Move()
+    {
+        isGrounded = Physics2D.BoxCast(
             transform.position,
-            groundTarget.position,
+            new Vector2(2.0f, 1.0f),
+            0.0f,
+            Vector2.down,
+            1.0f,
             1 << LayerMask.NameToLayer("Ground"));
 
 
