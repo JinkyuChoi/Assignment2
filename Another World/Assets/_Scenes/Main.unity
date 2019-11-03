@@ -360,6 +360,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Slime Coin (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -808,6 +813,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Slime Coin (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -876,6 +886,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blue Slime Coin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
       objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
@@ -2273,12 +2288,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 856876614}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -150, y: -50}
+  m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &238808243
 MonoBehaviour:
@@ -2300,18 +2315,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 4
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Score: 99999'
 --- !u!222 &238808244
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2810,83 +2825,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9867d6c65ea2d1e46bbe779fe7a488d6, type: 3}
---- !u!1 &321494861
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 321494862}
-  - component: {fileID: 321494864}
-  - component: {fileID: 321494863}
-  m_Layer: 5
-  m_Name: LivesLabel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &321494862
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321494861}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 856876614}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 183.8, y: -133}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &321494863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321494861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 0
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: New Text
---- !u!222 &321494864
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321494861}
-  m_CullTransparentMesh: 0
 --- !u!4 &324146374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5655919139673953899, guid: 262e593a79675e041b52d7ce7c13b6f4,
@@ -3748,6 +3686,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 262e593a79675e041b52d7ce7c13b6f4, type: 3}
+--- !u!1001 &520111425
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 535341605}
+    m_Modifications:
+    - target: {fileID: 5250574107230290920, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_Name
+      value: Green Slime Coin (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d411cbef2034254d97827e8644cdefb, type: 3}
 --- !u!1 &535341604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3814,6 +3821,12 @@ Transform:
   - {fileID: 508930624}
   - {fileID: 239631975}
   - {fileID: 1491486887}
+  - {fileID: 1818401670}
+  - {fileID: 779987354}
+  - {fileID: 1415433055}
+  - {fileID: 764514316}
+  - {fileID: 713272670}
+  - {fileID: 1962364908}
   m_Father: {fileID: 1692221617}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4559,6 +4572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 445721314}
   player: {fileID: 2035880068}
+  gameController: {fileID: 2140111958}
 --- !u!61 &594002665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5332,6 +5346,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 84166053}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &713272670 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 520111425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &714016614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5706,6 +5726,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Slime Coin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5763,6 +5788,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52da3baad4e358744b5885ccfd46aa50, type: 3}
+--- !u!4 &764514316 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1020984261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &767066375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6782658989626504567, guid: 676feb984be6ec745a17121d23d86af1,
@@ -5774,6 +5805,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5655919139673953899, guid: 262e593a79675e041b52d7ce7c13b6f4,
     type: 3}
   m_PrefabInstance: {fileID: 1671447673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &779987354 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1205033634}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &782365197 stripped
 Transform:
@@ -6185,6 +6222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Slime Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6333,6 +6375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blue Slime Coin (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
       objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
@@ -6617,7 +6664,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!224 &856876614
 RectTransform:
@@ -6630,7 +6677,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 321494862}
   - {fileID: 238808242}
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -7278,6 +7324,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1576472754}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1020984261
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 535341605}
+    m_Modifications:
+    - target: {fileID: 5250574107230290920, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_Name
+      value: Green Slime Coin (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d411cbef2034254d97827e8644cdefb, type: 3}
 --- !u!1001 &1022413726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8160,7 +8275,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highScore: 0
   score: 0
-  lives: 0
 --- !u!4 &1138608682
 Transform:
   m_ObjectHideFlags: 0
@@ -8267,6 +8381,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1194528272
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 535341605}
+    m_Modifications:
+    - target: {fileID: 5250574107230290920, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_Name
+      value: Green Slime Coin (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d411cbef2034254d97827e8644cdefb, type: 3}
 --- !u!4 &1197879760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5655919139673953899, guid: 262e593a79675e041b52d7ce7c13b6f4,
@@ -8374,6 +8557,75 @@ MonoBehaviour:
   lookAheadFactor: 2
   lookAheadReturnSpeed: 0
   lookAheadMoveThreshold: 0
+--- !u!1001 &1205033634
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 535341605}
+    m_Modifications:
+    - target: {fileID: 5250574107230290920, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_Name
+      value: Green Slime Coin (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -32.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d411cbef2034254d97827e8644cdefb, type: 3}
 --- !u!1001 &1219748289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8493,6 +8745,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blue Slime Coin (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
       objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
@@ -9547,6 +9804,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Slime Coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9685,6 +9947,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Slime Coin (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9753,6 +10020,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blue Slime Coin (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
       objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
@@ -10219,6 +10491,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1415433055 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121904893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1420950735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5655919139673953899, guid: 262e593a79675e041b52d7ce7c13b6f4,
@@ -11154,6 +11432,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Slime Coin (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12050,6 +12333,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 542410058}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1629058870
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 535341605}
+    m_Modifications:
+    - target: {fileID: 5250574107230290920, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_Name
+      value: Green Slime Coin (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -34.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d411cbef2034254d97827e8644cdefb, type: 3}
 --- !u!1001 &1638090263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13156,6 +13508,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Slime Coin (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2952214963845432807, guid: 52da3baad4e358744b5885ccfd46aa50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Super Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2952214963845432800, guid: 52da3baad4e358744b5885ccfd46aa50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13443,6 +13800,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 262e593a79675e041b52d7ce7c13b6f4, type: 3}
+--- !u!4 &1818401670 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1629058870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1838316630
 GameObject:
   m_ObjectHideFlags: 0
@@ -14154,6 +14517,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7959092942792400869, guid: 6a35f3ea6d82d4b449cc44b632e9ceb2,
     type: 3}
   m_PrefabInstance: {fileID: 478538984}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1962364908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1194528272}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1962871022
 PrefabInstance:
@@ -15488,6 +15857,75 @@ Transform:
   m_Father: {fileID: 195571385}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2121904893
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 535341605}
+    m_Modifications:
+    - target: {fileID: 5250574107230290920, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_Name
+      value: Green Slime Coin (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -30.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250574107230290935, guid: 6d411cbef2034254d97827e8644cdefb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d411cbef2034254d97827e8644cdefb, type: 3}
 --- !u!1001 &2133412722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15592,10 +16030,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d8f1b60d50ae347b2378002fa6fa43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lives: 0
   _score: 0
-  livesLabel: {fileID: 0}
-  scoreLabel: {fileID: 0}
+  scoreLabel: {fileID: 238808243}
   highScoreLabel: {fileID: 0}
   scoreBoard: {fileID: 1138608680}
   startLabel: {fileID: 0}
@@ -15989,5 +16425,10 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 2140111958}
+    - target: {fileID: 7869817956645518581, guid: 4efe6959249b47d44851bc9da5215c95,
+        type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 445721314}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4efe6959249b47d44851bc9da5215c95, type: 3}

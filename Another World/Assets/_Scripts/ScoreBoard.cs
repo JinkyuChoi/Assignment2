@@ -8,5 +8,4 @@ public class Scoreboard : MonoBehaviour
 {
     public int highScore;
     public int score;
-    public int lives;
 }

@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private float myTime = 0f;
 
     public GameController gameController;
+    public Transform respawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -118,7 +119,12 @@ public class PlayerController : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Coin":
-                //gameController.Score += 100;
+                gameController.Score += 100;
+                Destroy(other.gameObject);
+                break;
+
+            case "Super Coin":
+                gameController.Score += 500;
                 Destroy(other.gameObject);
                 break;
         }
@@ -129,8 +135,14 @@ public class PlayerController : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Enemy":
-                gameController.Lives -= 1;
+                gameController.Score -= 1000;
+                Reset();
                 break;
         }
+    }
+
+    private void Reset()
+    {
+        gameObject.transform.position = respawnPoint.position;
     }
 }

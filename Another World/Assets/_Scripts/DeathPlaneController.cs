@@ -8,6 +8,7 @@ public class DeathPlaneController : MonoBehaviour
 
     public Transform respawnPoint;
     public GameObject player;
+    public GameController gameController;
 
     //// Start is called before the first frame update
     //void Start()
@@ -26,6 +27,7 @@ public class DeathPlaneController : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             other.gameObject.transform.position = respawnPoint.position;
+            gameController.Score -= 1000;
         }
     }
 }
