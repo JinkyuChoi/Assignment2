@@ -6,6 +6,5 @@ using UnityEngine;
 [System.Serializable]
 public class Scoreboard : MonoBehaviour
 {
-    public int highScore;
     public int score;
 }

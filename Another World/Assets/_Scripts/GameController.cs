@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -9,17 +10,17 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private int _score;
 
-    public Text scoreLabel;
-    public Text highScoreLabel;
-
     public GameObject scoreBoard;
 
     [Header("UI Control")]
-    public GameObject startLabel;
-    public GameObject startButton;
-    public GameObject endLabel;
+
+    public Text scoreLabel;
+
+    public Text congratulations;
+    public Text currentScore;
     public GameObject restartButton;
 
+    public bool gameEnd;
     // public properties
     public int Score
     {
@@ -33,11 +34,6 @@ public class GameController : MonoBehaviour
             _score = value;
             scoreBoard.GetComponent<Scoreboard>().score = _score;
 
-
-            if (scoreBoard.GetComponent<Scoreboard>().highScore < _score)
-            {
-                scoreBoard.GetComponent<Scoreboard>().highScore = _score;
-            }
             scoreLabel.text = "Score: " + _score.ToString();
 
             //if (_score >= 500 && SceneManager.GetActiveScene().name != "Level2")
@@ -49,12 +45,35 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        restartButton = GameObject.Find("Button");
+        scoreLabel.enabled = true;
+        congratulations.enabled = false;
+        currentScore.enabled = false;
+        restartButton.SetActive(false);
         Score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(gameEnd)
+        {
+            GameEnd();
+        }
+    }
+
+    void GameEnd()
+    {
+        congratulations.enabled = true;
+        currentScore.text = "Your Score : " + scoreBoard.GetComponent<Scoreboard>().score.ToString();
+        currentScore.enabled = true;
+        restartButton.SetActive(true);
+
+        scoreLabel.enabled = false;
+    }
+
+    public void OnRestartButtonClick()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

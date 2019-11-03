@@ -125,6 +125,10 @@ public class PlayerController : MonoBehaviour
                 Destroy(other.gameObject);
                 coinSound.Play();
                 break;
+
+            case "Finish":
+                gameController.gameEnd = true;
+                break;
         }
     }
 
