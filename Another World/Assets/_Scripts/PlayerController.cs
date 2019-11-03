@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     public float attackCD;
     private float myTime = 0f;
 
+    public GameController gameController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -109,5 +111,20 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(playerRigidBody.velocity.x, -maximumVelocity.x, maximumVelocity.x),
             Mathf.Clamp(playerRigidBody.velocity.y, -maximumVelocity.y, maximumVelocity.y)
             );
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "Enemy":
+                //_thunderSound.Play();
+                gameController.Lives -= 1;
+                break;
+            case "Coin":
+                //_yaySound.Play();
+                gameController.Score += 100;
+                break;
+        }
     }
 }
