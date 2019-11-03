@@ -117,13 +117,19 @@ public class PlayerController : MonoBehaviour
     {
         switch (other.gameObject.tag)
         {
-            case "Enemy":
-                //_thunderSound.Play();
-                gameController.Lives -= 1;
-                break;
             case "Coin":
-                //_yaySound.Play();
-                gameController.Score += 100;
+                //gameController.Score += 100;
+                Destroy(other.gameObject);
+                break;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "Enemy":
+                gameController.Lives -= 1;
                 break;
         }
     }

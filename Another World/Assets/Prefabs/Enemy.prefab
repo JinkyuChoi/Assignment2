@@ -195,15 +195,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1dd3482ff0172459ce0c08616a906f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAnimState: 0
   enemyAnimator: {fileID: 6782658989626504565}
   enemySpriteRenderer: {fileID: 6782658989626504566}
   enemyRigidBody: {fileID: 6782658989626504564}
   isGrounded: 0
   hasGroundAhead: 0
   hasWallAhead: 0
+  hasEnemyAhead: 0
   lookAhead: {fileID: 6782658989875568917}
   wallAhead: {fileID: 6782658988644521014}
+  EnemyAhead: {fileID: 6782658988644521014}
   isFacingLeft: 1
   movementSpeed: 5
 --- !u!1 &6782658989875568916
