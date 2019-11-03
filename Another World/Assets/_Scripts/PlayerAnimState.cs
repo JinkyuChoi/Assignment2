@@ -9,7 +9,8 @@ namespace Util
     {
         IDLE,
         WALK,
-        JUMP
+        JUMP,
+        ATTACK
     }
 }
 

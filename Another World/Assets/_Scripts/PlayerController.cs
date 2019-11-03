@@ -16,9 +16,13 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     public float moveForce;
     public float jumpForce;
+    public Vector2 maximumVelocity = new Vector2();
 
     public bool isGrounded;
     public Transform groundTarget;
+
+    public float attackCD;
+    private float myTime = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
 
         //Stop
-        if (Input.GetAxis("Horizontal") == 0)
+        if (Input.GetAxis("Horizontal") == 0 && isGrounded)
         {
             playerAnimState = PlayerAnimState.IDLE;
             playerAnimator.SetInteger("AnimState", (int)PlayerAnimState.IDLE);
@@ -46,7 +50,7 @@ public class PlayerController : MonoBehaviour
         //Right
         if (Input.GetAxis("Horizontal") > 0)
         {
-            playerSpriteRenderer.flipX = false;
+            playerSpriteRenderer.flipX = true;
 
             playerAnimState = PlayerAnimState.WALK;
             playerAnimator.SetInteger("AnimState", (int)PlayerAnimState.WALK);
@@ -57,15 +61,15 @@ public class PlayerController : MonoBehaviour
         //Left
         if (Input.GetAxis("Horizontal") < 0)
         {
-            playerSpriteRenderer.flipX = true;
+            playerSpriteRenderer.flipX = false;
             playerAnimState = PlayerAnimState.WALK;
             playerAnimator.SetInteger("AnimState", (int)PlayerAnimState.WALK);
             playerRigidBody.AddForce(Vector2.left * moveForce);
 
         }
 
-        //Jump)
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        //Jump
+        if (Input.GetAxis("Jump") > 0 && isGrounded)
         {
             playerAnimState = PlayerAnimState.JUMP;
             playerAnimator.SetInteger("AnimState", (int)PlayerAnimState.JUMP);
@@ -73,10 +77,29 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
-        //Not Jump
-        //if (Input.GetAxis("Jump") == 0)
-        //{
-        //    playerAnimState = PlayerAnimState.IDLE;
-        //}
+        //Midair
+        if (!isGrounded)
+        {
+            playerAnimState = PlayerAnimState.JUMP;
+        }
+
+        //Attack
+        /*
+        myTime += Time.deltaTime;
+
+
+        if (Input.GetButton("Fire1") && myTime > attackCD)
+        {
+            playerAnimState = PlayerAnimState.ATTACK;
+            playerAnimator.SetInteger("AnimState", (int)PlayerAnimState.ATTACK);
+
+            myTime = 0.0f;
+        }
+        */
+
+        playerRigidBody.velocity = new Vector2(
+            Mathf.Clamp(playerRigidBody.velocity.x, -maximumVelocity.x, maximumVelocity.x),
+            Mathf.Clamp(playerRigidBody.velocity.y, -maximumVelocity.y, maximumVelocity.y)
+            );
     }
 }
