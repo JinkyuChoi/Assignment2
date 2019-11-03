@@ -24,10 +24,6 @@ public class DeathPlaneController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Player")
-        {
-            other.gameObject.transform.position = respawnPoint.position;
-            gameController.Score -= 1000;
-        }
+
     }
 }

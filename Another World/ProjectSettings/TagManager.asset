@@ -7,6 +7,7 @@ TagManager:
   - Coin
   - Enemy
   - Super Coin
+  - Death Plane
   layers:
   - Default
   - TransparentFX

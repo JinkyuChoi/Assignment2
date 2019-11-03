@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour
     public GameController gameController;
     public Transform respawnPoint;
 
+    public AudioSource movemnetSound;
+    public AudioSource deathSound;
+    public AudioSource coinSound;
+    public AudioSource jumpSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,21 +67,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Horizontal") > 0)
         {
             playerSpriteRenderer.flipX = true;
-
             playerAnimState = PlayerAnimState.WALK;
             playerAnimator.SetInteger("AnimState", (int)PlayerAnimState.WALK);
             playerRigidBody.AddForce(Vector2.right * moveForce);
-
         }
 
         //Left
         if (Input.GetAxis("Horizontal") < 0)
         {
+
             playerSpriteRenderer.flipX = false;
             playerAnimState = PlayerAnimState.WALK;
             playerAnimator.SetInteger("AnimState", (int)PlayerAnimState.WALK);
             playerRigidBody.AddForce(Vector2.left * moveForce);
-
         }
 
         //Jump
@@ -94,19 +97,12 @@ public class PlayerController : MonoBehaviour
             playerAnimState = PlayerAnimState.JUMP;
         }
 
-        //Attack
-        /*
-        myTime += Time.deltaTime;
-
-
-        if (Input.GetButton("Fire1") && myTime > attackCD)
+        //Movement Sound
+        if (Input.GetButtonDown("Jump"))
         {
-            playerAnimState = PlayerAnimState.ATTACK;
-            playerAnimator.SetInteger("AnimState", (int)PlayerAnimState.ATTACK);
-
-            myTime = 0.0f;
+            jumpSound.Play();
         }
-        */
+
 
         playerRigidBody.velocity = new Vector2(
             Mathf.Clamp(playerRigidBody.velocity.x, -maximumVelocity.x, maximumVelocity.x),
@@ -121,11 +117,13 @@ public class PlayerController : MonoBehaviour
             case "Coin":
                 gameController.Score += 100;
                 Destroy(other.gameObject);
+                coinSound.Play();
                 break;
 
             case "Super Coin":
                 gameController.Score += 500;
                 Destroy(other.gameObject);
+                coinSound.Play();
                 break;
         }
     }
@@ -135,6 +133,13 @@ public class PlayerController : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Enemy":
+                deathSound.Play();
+                gameController.Score -= 1000;
+                Reset();
+                break;
+
+            case "Death Plane":
+                deathSound.Play();
                 gameController.Score -= 1000;
                 Reset();
                 break;
