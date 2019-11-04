@@ -1,0 +1,5 @@
+Character & Enemy - Yeong Jae Hwang
+Background Music - https://opengameart.org/content/the-little-big-adventure
+Sound Effects - https://opengameart.org/content/25-cc0-mud-sfx
+Slime Coins - https://opengameart.org/content/animated-slime
+Background Assets - Unity Asset Store "2D SpritePack"
