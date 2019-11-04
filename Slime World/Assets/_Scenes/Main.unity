@@ -7223,6 +7223,7 @@ RectTransform:
   - {fileID: 468476825}
   - {fileID: 1264466978}
   - {fileID: 354991458}
+  - {fileID: 1943234308}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8818,8 +8819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666be174a31da68418c77f61ef416af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScore: 0
   score: 0
+  hitpoint: 0
 --- !u!4 &1138608682
 Transform:
   m_ObjectHideFlags: 0
@@ -15118,6 +15119,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1943234307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1943234308}
+  - component: {fileID: 1943234310}
+  - component: {fileID: 1943234309}
+  m_Layer: 5
+  m_Name: HitPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1943234308
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943234307}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 856876614}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -50}
+  m_SizeDelta: {x: 250, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1943234309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943234307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'HP: 10'
+--- !u!222 &1943234310
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943234307}
+  m_CullTransparentMesh: 0
 --- !u!4 &1960949360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7959092942792400869, guid: 6a35f3ea6d82d4b449cc44b632e9ceb2,
@@ -17022,14 +17100,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d8f1b60d50ae347b2378002fa6fa43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _score: 0
+  player: {fileID: 2035880068}
   scoreBoard: {fileID: 1138608680}
+  _score: 0
+  _hitpoint: 0
   scoreLabel: {fileID: 238808243}
+  hitpointLabel: {fileID: 1943234309}
   congratulations: {fileID: 468476826}
   currentScore: {fileID: 354991459}
-  highScore: {fileID: 0}
   restartButton: {fileID: 1264466977}
   gameEnd: 0
+  respawnPoint: {fileID: 445721314}
 --- !u!4 &2140111959
 Transform:
   m_ObjectHideFlags: 0

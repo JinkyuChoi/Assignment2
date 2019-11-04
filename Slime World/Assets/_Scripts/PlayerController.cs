@@ -3,30 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using Util;
 
+//2019-11-03 by Jinkyu Choi
 public class PlayerController : MonoBehaviour
 {
-
-    public PlayerAnimState playerAnimState;
-
     [Header("Properties")]
     public Animator playerAnimator;
     public SpriteRenderer playerSpriteRenderer;
     public Rigidbody2D playerRigidBody;
+    public GameController gameController;
 
-    [Header("Movement")]
+
+    [Header("Animation Control")]
+    public PlayerAnimState playerAnimState;
+
+    [Header("Movement Control")]
     public float moveForce;
     public float jumpForce;
     public Vector2 maximumVelocity = new Vector2();
-
     public bool isGrounded;
     public Transform groundTarget;
 
-    public float attackCD;
-    private float myTime = 0f;
-
-    public GameController gameController;
-    public Transform respawnPoint;
-
+    [Header("Audio Control")]
     public AudioSource movemnetSound;
     public AudioSource deathSound;
     public AudioSource coinSound;
@@ -45,8 +42,10 @@ public class PlayerController : MonoBehaviour
         Move();
     }
 
+    //code from Tom Tsiliopoulos "In class"
     void Move()
     {
+        //Checking if the Enemy is on ground or midair
         isGrounded = Physics2D.BoxCast(
             transform.position,
             new Vector2(2.0f, 1.0f),
@@ -97,19 +96,20 @@ public class PlayerController : MonoBehaviour
             playerAnimState = PlayerAnimState.JUMP;
         }
 
-        //Movement Sound
+        //Jump Sound
         if (Input.GetButtonDown("Jump"))
         {
             jumpSound.Play();
         }
 
-
+        //Restricts maximum velocity to certain amount
         playerRigidBody.velocity = new Vector2(
             Mathf.Clamp(playerRigidBody.velocity.x, -maximumVelocity.x, maximumVelocity.x),
             Mathf.Clamp(playerRigidBody.velocity.y, -maximumVelocity.y, maximumVelocity.y)
             );
     }
 
+    //code from Tom Tsiliopoulos "Mail Pilot"
     private void OnTriggerEnter2D(Collider2D other)
     {
         switch (other.gameObject.tag)
@@ -126,32 +126,32 @@ public class PlayerController : MonoBehaviour
                 coinSound.Play();
                 break;
 
+            //If you enter finish object the game will set to gameEnd true in gameController
             case "Finish":
                 gameController.gameEnd = true;
+                Destroy(this.gameObject);
                 break;
         }
     }
 
+    //code from Tom Tsiliopoulos "Mail Pilot"
+    //If player gets hit by enemy or fall down it will decrease the score and reset player
     private void OnCollisionEnter2D(Collision2D other)
     {
         switch (other.gameObject.tag)
         {
             case "Enemy":
                 deathSound.Play();
-                gameController.Score -= 1000;
-                Reset();
+                gameController.Hitpoint -= 1;
                 break;
 
             case "Death Plane":
                 deathSound.Play();
-                gameController.Score -= 1000;
-                Reset();
+                gameController.Hitpoint -= 100;
                 break;
         }
     }
 
-    private void Reset()
-    {
-        gameObject.transform.position = respawnPoint.position;
-    }
+
+
 }
